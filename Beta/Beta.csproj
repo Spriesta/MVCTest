@@ -1,0 +1,1300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F279DF5-F835-497B-8001-654007A92FE2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Beta</RootNamespace>
+    <AssemblyName>Beta</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44345</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Forms\MainLayout\MainLayout.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\load_skin.js.gz" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\skin_styles.css.gz" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\accept.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\accept_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\add.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\add_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\approve.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\auto_fit.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\auto_fit_all.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\back_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\cancel.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\clear_sort.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\close.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\close_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\close_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\close_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\color_swatch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\column_preferences.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\configure.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\configure_sort.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\download.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\drag.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\drag_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\dynamic.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\edit.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\edit_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\email_go.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\exclamation.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\export.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\filter.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\first.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\forward_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\freezeLeft.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\freezeRight.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\groupby.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\help.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\help_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\last.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\next.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\ok.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\plus.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\plus_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\prev.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\print.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\redo.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\refresh.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\refresh_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\remove.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\remove_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\save.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\save_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\search.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\sort_ascending.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\sort_descending.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\text_linespacing.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\undo.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\unfreeze.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\ungroup.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\view.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\actions\view_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\black.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\blank.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Down_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Down_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Down_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_Down_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_Down_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_Down_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_Selected_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\button\button_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Calendar\gripper.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ColorPicker\crosshair.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ColorPicker\spectrum.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\cssButton\button_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\cssButton\button_Down_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\cssButton\button_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\cssButton\button_Selected_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\cssButton\button_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\arrow_closed.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\arrow_closed_down.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\arrow_closed_left.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\arrow_closed_right.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\arrow_open.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\arrow_opening.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\arrow_open_down.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\arrow_open_left.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\arrow_open_right.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\arrow_open_up.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\close.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\close_over.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\colHeader.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\colHeaderDisabled.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\colHeaderLabel.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\colHeaderLabelDown.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\colHeaderOver.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\colHeaderSelected.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\colHeaderSelectedOver.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\header_handle.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\header_handle_over.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\innerHeader.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\innerHeaderDown.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\innerHeaderSelected.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\innerHeaderSelectedOver.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\maximize.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\maximize_over.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\minimize.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\minimize_over.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\rowHeader.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\rowHeaderDisabled.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\rowHeaderLabel.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\rowHeaderLabelDown.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\rowHeaderLabelSelected.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\rowHeaderOver.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\rowHeaderSelected.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\rowHeaderSelectedOver.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\sort_down.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\sort_down_over.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\sort_down_selected.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\sort_down_selected_over.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\sort_up.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\sort_up_over.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\sort_up_selected.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\CubeGrid\sort_up_selected_over.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DatabaseBrowser\column.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DatabaseBrowser\data.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DateChooser\arrow_left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DateChooser\arrow_right.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DateChooser\doubleArrow_left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DateChooser\doubleArrow_right.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Dialog\ask.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Dialog\confirm.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Dialog\error.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Dialog\notify.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Dialog\say.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Dialog\stop.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Dialog\warn.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\checkbox_sprite.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\checked.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\checked_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\checked_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\ColorPicker_icon.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\ColorPicker_icon_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\ColorPicker_icon_Disabled_empty.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\ColorPicker_icon_Disabled_empty_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\ColorPicker_icon_Disabled_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\ColorPicker_icon_empty.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\ColorPicker_icon_empty_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\ColorPicker_icon_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\ColorPicker_icon_transparent.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\date_control.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\date_control_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\default_formItem_icon.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\default_formItem_icon_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\default_formItem_icon_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\drop.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\drop_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\dynamic.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\partialcheck.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\partialcheck_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\partialcheck_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\partialcheck_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\PopUpTextAreaEditor_icon.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\PropSheet_ColorPicker_icon.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\PropSheet_ColorPicker_icon_empty.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\PropSheet_ColorPicker_icon_transparent.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\PropSheet_pickbutton.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\PropSheet_pickbutton_Disabled.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\Remove_icon.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\Remove_icon_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\Remove_icon_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\search_icon.svg" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\search_icon~2.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\search_icon~2_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_decrease.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_decrease_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_decrease_Disabled_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_decrease_Focused.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_decrease_Focused_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_decrease_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_increase.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_increase_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_increase_Disabled_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_increase_Focused.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_increase_Focused_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_increase_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_sprite.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_sprite_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_sprite_transparent.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\spinner_control_sprite_transparent_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\text_control.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\text_control_Disabled.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\text_control_Over.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unchecked.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unchecked_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unchecked_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unsetcheck.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unsetcheck_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unsetcheck_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unsetcheck_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_minus.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_minus_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_minus_Disabled_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_minus_Focused.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_minus_Focused_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_minus_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_plus.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_plus_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_plus_Disabled_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_plus_Focused.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_plus_Focused_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_plus_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_sprite.min.svg" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_sprite.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_sprite_rtl.min.svg" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_sprite_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_sprite_rtl~2.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\DynamicForm\unstacked_spinner_sprite~2.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\edges\edge_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\edges\edge_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\edges\edge_borderImage.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\edges\edge_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\edges\edge_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\edges\edge_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\edges\edge_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\edges\edge_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\edges\edge_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\FileBrowser\createNewFolder.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\FileBrowser\file.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\FileBrowser\folder.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\FileBrowser\previousFolder.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\FileBrowser\refresh.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\FileBrowser\upOneLevel.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_down_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_down_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_left_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_left_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_right.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_right_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_right_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_up.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_up_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\arrow_up_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\calculator.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\calculator_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\calculator_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\cart.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\cart_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\cart_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\cascade.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\cascade_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\cascade_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\clipboard.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\clipboard_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\clipboard_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\clock.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\clock_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\clock_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\close.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\close_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\close_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\comment.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\comment_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\comment_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\document.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\document_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_down_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_down_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_left_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_left_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_right.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_right_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_right_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_up.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_up_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\double_arrow_up_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\favourite.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\favourite_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\favourite_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\find.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\find_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\find_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\help.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\help_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\help_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\home.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\home_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\home_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\mail.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\mail_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\mail_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\maximize.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\maximize_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\maximize_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\maximize_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\minimize.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\minimize_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\minimize_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\minus.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\minus_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\minus_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\person.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\person_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\person_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\pin_down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\pin_down_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\pin_down_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\pin_left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\pin_left_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\pin_left_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\plus.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\plus_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\plus_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\print.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\print_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\print_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\refresh.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\refresh_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\refresh_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\refresh_thin.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\refresh_thin_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\refresh_thin_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\save.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\save_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\save_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\settings.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\settings_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\settings_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\transfer.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\transfer_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\transfer_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\trash.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\trash_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\trash_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\zoom.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\zoom_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\headerIcons\zoom_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ImgButton\button.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ImgButton\button_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ImgButton\button_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ImgButton\button_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\iOS\more.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\big_header.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\big_header_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\big_header_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\big_header_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\big_header_Selected.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\big_header_Selected_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\big_header_Selected_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\expander_closed.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\expander_opened.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\formula_menuItem.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\group_closed.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\group_opened.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header2.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header2_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header2_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header2_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header2_Selected.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header2_Selected_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header2_Selected_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header_menu.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header_Selected.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header_Selected_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\header_Selected_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\row.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\row_collapsed.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\row_collapsed_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\row_expanded.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\row_expanded_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\row_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\row_Over_Selected.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\row_Selected.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\row_Selected_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\sort_ascending.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\sort_ascending_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\sort_descending.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ListGrid\sort_descending_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\loading.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\loadingSmall.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\check.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\check_disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_background.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_background_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_button.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_button_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_button_up.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_button_up_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_right.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_rollover.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_selected_rollover.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\menu_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\submenu.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\submenu_disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\submenu_disabled_left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\submenu_down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\submenu_down_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\submenu_down_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Menu\submenu_left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\MultiUploadItem\icon_add_files.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\MultiUploadItem\icon_add_files_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\MultiUploadItem\icon_remove_files.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\MultiUploadItem\icon_remove_files_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\back_arrow.svg" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\back_arrow_Down.svg" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\back_arrow_Down_rtl.svg" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\back_arrow_rtl.svg" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\back_arrow~2.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\back_arrow~2_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\back_arrow~2_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\back_arrow~2_Down_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\back_arrow~2_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\miniNav_Disabled_down.svg" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\miniNav_Disabled_up.svg" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\miniNav_down.svg" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\miniNav_up.svg" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\miniNav~2_Disabled_down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\miniNav~2_Disabled_up.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\miniNav~2_down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\NavigationBar\miniNav~2_up.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Notify\checkmark.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Notify\close.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Notify\error.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Notify\warning.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\opacity.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Panel\panel_header.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\clear_picker.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\clear_picker_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\clear_picker_Disabled_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\clear_picker_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\clear_picker_Down_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\clear_picker_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\clear_picker_Over_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\clear_picker_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\comboBoxPicker.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\comboBoxPicker_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\comboBoxPicker_Disabled_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\comboBoxPicker_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\comboBoxPicker_Over_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\comboBoxPicker_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\date_picker.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\date_picker_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\date_picker_Disabled_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\date_picker_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\date_picker_Down_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\date_picker_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\date_picker_Over_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\date_picker_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\pickers_sprite.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\pickers_sprite_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\refresh_picker.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\refresh_picker_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\refresh_picker_Disabled_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\refresh_picker_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\refresh_picker_Down_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\refresh_picker_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\refresh_picker_Over_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\refresh_picker_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\search_picker.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\search_picker_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\search_picker_Disabled_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\search_picker_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\search_picker_Down_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\search_picker_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\search_picker_Over_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\pickers\search_picker_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_h_empty_end.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_h_empty_start.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_h_empty_stretch.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_h_end.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_h_start.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_h_stretch.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_v_empty_end.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_v_empty_start.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_v_empty_stretch.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_v_end.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_v_start.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_Disabled_v_stretch.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_h_empty_end.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_h_empty_start.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_h_empty_stretch.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_h_end.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_h_start.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_h_stretch.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_v_empty_end.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_v_empty_start.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_v_empty_stretch.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_v_end.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_v_start.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Progressbar\progressbar_v_stretch.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\readme.txt" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RecordEditor\add.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RecordEditor\add_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RecordEditor\add_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RecordEditor\check.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RecordEditor\filter.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RecordEditor\filter_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RecordEditor\filter_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RecordEditor\query.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\background_color.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\background_color_Disabled.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\bullet_blue.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\bullet_green.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\bullet_purple.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\bullet_red.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\copy.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\copy_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\cut.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\cut_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\indent.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\indent_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\link_new.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\outdent.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\outdent_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\paste.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\paste_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\print.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\print_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\separator.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\separator_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_align_center.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_align_center_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_align_justified.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_align_justified_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_align_left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_align_left_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_align_right.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_align_right_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_bold.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_bold_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_color.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_color_Disabled.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_italic.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_italic_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_list_bullets.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_list_bullets_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_list_edit.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_list_edit_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_list_numbers.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_list_numbers_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_underline.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\RichTextEditor\text_underline_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\rotationCursor.cur" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SchemaViewer\complexType.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SchemaViewer\operation.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SchemaViewer\simpleType.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_corner.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Disabled_corner.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Disabled_track.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Down_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Down_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Down_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Down_track.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Over_corner.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_Over_track.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_sprite.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hscroll_track.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_Down_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_Down_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_Down_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_grip.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_grip_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_grip_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_grip_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\hthumb_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_corner.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Disabled_corner.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Disabled_track.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Down_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Down_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Down_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Down_track.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Over_corner.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_Over_track.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_sprite.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vscroll_track.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_Down_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_Down_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_Down_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_grip.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_grip_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_grip_Down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_grip_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Scrollbar\vthumb_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_closed_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_closed_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_closed_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Disabled_closed_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Disabled_closed_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Disabled_closed_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Disabled_opened_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Disabled_opened_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Disabled_opened_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_opened_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_opened_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_opened_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Over_closed_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Over_closed_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Over_closed_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Over_opened_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Over_opened_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\header_Over_opened_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\opener_closed.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\opener_Disabled_closed.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\opener_Disabled_opened.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\opener_opened.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\opener_opened_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\opener_opened_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\SectionHeader\opener_opened_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\background.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\progressCursorTracker.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds10_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds10_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds10_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds10_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds10_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds10_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds10_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds10_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds1_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds1_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds1_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds1_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds1_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds1_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds1_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds1_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds2_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds2_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds2_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds2_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds2_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds2_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds2_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds2_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds3_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds3_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds3_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds3_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds3_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds3_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds3_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds3_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds4_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds4_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds4_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds4_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds4_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds4_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds4_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds4_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds5_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds5_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds5_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds5_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds5_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds5_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds5_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds5_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds6_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds6_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds6_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds6_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds6_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds6_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds6_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds6_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds7_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds7_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds7_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds7_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds7_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds7_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds7_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds7_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds8_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds8_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds8_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds8_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds8_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds8_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds8_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds8_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds9_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds9_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds9_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds9_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds9_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds9_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds9_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds9_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\shared\shadows\ds_center.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\hthumb.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\hthumb_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\hthumb_down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\htrack_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\htrack_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\htrack_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\htrack_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\htrack_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\htrack_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\vthumb.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\vthumb_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\vthumb_down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\vtrack_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\vtrack_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\vtrack_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\vtrack_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\vtrack_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Slider\vtrack_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Splitbar\hsplit_bg.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Splitbar\hsplit_Disabled_bg.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Splitbar\hsplit_snap.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Splitbar\hsplit_snap_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Splitbar\vsplit_bg.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Splitbar\vsplit_Disabled_bg.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Splitbar\vsplit_snap.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Splitbar\vsplit_snap_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Splitbar\vsplit_snap_Over.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Splitbar\vsplit_snap_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\close.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\close_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_bottom.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_Disabled_bottom.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_Disabled_left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_Disabled_right.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_Disabled_top.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_Down_bottom.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_Down_left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_Down_right.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_Down_top.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_right.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\picker_top.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_bottom_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_bottom_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Disabled_bottom_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Disabled_bottom_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Disabled_left_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Disabled_left_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Disabled_right_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Disabled_right_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Disabled_top_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Disabled_top_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Down_bottom_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Down_bottom_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Down_left_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Down_left_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Down_right_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Down_right_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Down_top_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_Down_top_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_left_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_left_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_right_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_right_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_top_back.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\scroll_top_forward.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TabSet\tabset_sprite.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\baseline_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\baseline_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\baseline_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Selected_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Selected_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Selected_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Selected_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Selected_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Selected_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Selected_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Selected_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_Selected_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\bottom\tab_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\close.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\close_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Selected_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Selected_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Selected_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Selected_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Selected_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Selected_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Selected_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Selected_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_Selected_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\left\tab_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\lrtab_sprite.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\baseline_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\baseline_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\baseline_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\close.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\close_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Selected_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Selected_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Selected_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Selected_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Selected_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Selected_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Selected_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Selected_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_Selected_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\right\tab_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\tbtab_sprite.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\baseline_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\baseline_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\baseline_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\close.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\close_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Selected_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Selected_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Selected_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Selected_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Selected_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Selected_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Selected_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Selected_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_Selected_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Tab\top\tab_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TileGrid\tileOver.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\background.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\background_vertical.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Disabled_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Disabled_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Disabled_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Down_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Down_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Down_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Selected_Down_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Selected_Down_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Selected_Down_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Selected_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Selected_Over_end.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Selected_Over_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Selected_Over_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Selected_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_Selected_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_start.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\button\button_stretch.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\hresizer.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\hresizer_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\hseparator.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\hseparator_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\resizer.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\resizer_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\separator.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\ToolStrip\separator_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\delete.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\delete_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\delete_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\down.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\down_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\down_last.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\down_last_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\down_last_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\down_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\left.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\left_all.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\left_all_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\left_all_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\left_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\left_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\right.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\right_all.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\right_all_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\right_all_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\right_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\right_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\up.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\up_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\up_first.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\up_first_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\up_first_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TransferIcons\up_Over.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_ancestor.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_ancestor_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_closed_end.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_closed_end_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_closed_middle.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_closed_middle_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_closed_single.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_closed_single_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_closed_start.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_closed_start_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_end.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_end_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_middle.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_middle_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_opened_end.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_opened_end_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_opened_middle.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_opened_middle_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_opened_single.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_opened_single_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_opened_start.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_opened_start_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_single.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_single_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_start.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\connector_start_rtl.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\file.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\folder_closed.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\folder_drop.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\folder_file.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\folder_loading.gif" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\folder_open.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\folder_opened.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\opener_closed.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\opener_closed_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\opener_opened.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\TreeGrid\opener_opened_rtl.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\headerIcon.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\headerIcon_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\h_resizer.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\resizer.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\resizer_Disabled.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\v_resizer.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\window_B.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\window_BL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\window_BR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\window_L.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\window_R.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\window_T.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\window_TL.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\images\Window\window_TR.png" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\load_skin.js" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\skin_styles.css" />
+    <Content Include="Scripts\isomorphic\skins\EnterpriseBlue\unsupported_browser.html" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_AceEditor.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_AdminConsole.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Calendar.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_ChangeLogViewer.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_ClassBrowser.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Containers.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Core.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_DataBinding.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_DeveloperConsole.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_DocViewer.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Drawing.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_DSBrowser.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_EBay.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_ExampleViewer.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_FileBrowser.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_FileLoader.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Forms.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Foundation.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Gmail.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Grids.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_History.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Kapow.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_PluginBridges.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_RealtimeMessaging.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_ReferenceDocs.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_RichTextEditor.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_SalesForce.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Scheduler.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_SkinUtil.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Solr.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_SQLBrowser.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_SyntaxHiliter.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_SystemSchema.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Tools.js" />
+    <Content Include="Scripts\isomorphic\system\development\ISC_Workflow.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_AceEditor.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_Calendar.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_ClassBrowser.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_Containers.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_Core.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_DataBinding.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_Drawing.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_DSBrowser.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_EBay.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_Forms.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_Foundation.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_Gmail.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_Grids.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_History.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_Kapow.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_PluginBridges.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_ReferenceDocs.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_RichTextEditor.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_SalesForce.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_Scheduler.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_SQLBrowser.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_SystemSchema.js" />
+    <Content Include="Scripts\isomorphic\system\modules\ISC_Workflow.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Main\MainLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52572</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44345/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
